@@ -15,6 +15,8 @@ const items = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [language, setLanguage] = useState('English');
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 gradient-bg py-4 transition-all duration-300">
@@ -47,9 +49,31 @@ export default function Header() {
 
         {/* Right side controls */}
         <div className="flex items-center gap-2 sm:gap-4 shrink-0 z-10">
-          <button className="hidden sm:block text-white hover:text-secondary transition-colors p-2">
-            <Globe className="w-5 h-5" />
-          </button>
+          {/* Language selector */}
+          <div className="relative inline-block text-left">
+            <button
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              className="text-white hover:text-secondary transition-colors p-2 flex items-center"
+            >
+              <Globe className="w-5 h-5 mr-1" />
+              <span className="hidden sm:inline">{language}</span>
+            </button>
+            {isLangMenuOpen && (
+              <div className="origin-top-right absolute left-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                  {['English', 'Spanish', 'German', 'Arabic', 'French'].map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => { setLanguage(lang); setIsLangMenuOpen(false); }}
+                      className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      {lang}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
 
           <div className="hidden sm:block w-px h-6 bg-white/20"></div>
 
