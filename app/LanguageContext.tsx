@@ -32,21 +32,27 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
     const setGoogleTranslateCookie = (lang: Language) => {
         const domain = window.location.hostname;
+        const isLocal = domain === 'localhost' || domain === '127.0.0.1';
 
         // Helper to clear cookies aggressively
         const clearCookie = (name: string) => {
             document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain};`;
-            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${domain};`;
+            if (!isLocal) {
+                document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain};`;
+                document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${domain};`;
+            }
         };
 
         if (lang === 'en') {
             clearCookie('googtrans');
+            clearCookie('googtrans%2F%2Fen');
         } else {
             const val = `/en/${lang}`;
             document.cookie = `googtrans=${val}; path=/;`;
-            document.cookie = `googtrans=${val}; path=/; domain=${domain};`;
-            document.cookie = `googtrans=${val}; path=/; domain=.${domain};`;
+            if (!isLocal) {
+                document.cookie = `googtrans=${val}; path=/; domain=${domain};`;
+                document.cookie = `googtrans=${val}; path=/; domain=.${domain};`;
+            }
         }
     }
 
