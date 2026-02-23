@@ -52,9 +52,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                         </h1>
                     </div>
 
-                    <p className="text-xl md:text-2xl text-white/70 max-w-3xl leading-relaxed">
-                        {service.fullDesc}
-                    </p>
+                    <div className="grid md:grid-cols-2 gap-12 mt-12 pt-12 border-t border-white/10">
+                        <div>
+                            <h2 className="text-secondary font-bold uppercase tracking-widest text-sm mb-4">The Problem</h2>
+                            <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light">
+                                "{service.problem}"
+                            </p>
+                        </div>
+                        <div>
+                            <h2 className="text-secondary font-bold uppercase tracking-widest text-sm mb-4">Our Solution</h2>
+                            <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+                                {service.solution}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
