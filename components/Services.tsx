@@ -1,15 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
-import { Search, Code, TrendingUp, Smartphone, Palette, Globe } from 'lucide-react';
-
-const services = [
-    { icon: Search, title: "SEO Strategy", desc: "Search engine optimization for maximum visibility." },
-    { icon: Palette, title: "Web Design", desc: "Modern interfaces focused on the user." },
-    { icon: Code, title: "Development", desc: "Clean and scalable code for your platform." },
-    { icon: TrendingUp, title: "Marketing", desc: "Campaigns oriented to real conversion." },
-    { icon: Smartphone, title: "App Design", desc: "Fluid and attractive mobile experiences." },
-    { icon: Globe, title: "Hosting", desc: "Security and speed for your website." }
-];
+import Link from 'next/link';
+import { servicesData } from '@/lib/servicesData';
 
 export default function Services() {
     return (
@@ -26,19 +18,20 @@ export default function Services() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                    {services.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            whileHover={{ scale: 1.05 }}
-                            className="p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all cursor-pointer group"
-                        >
-                            <item.icon className="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform" />
-                            <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
-                            <p className="text-white/50 text-base leading-relaxed">{item.desc}</p>
-                        </motion.div>
+                    {servicesData.map((item, index) => (
+                        <Link href={`/services/${item.slug}`} key={index}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1, duration: 0.5 }}
+                                whileHover={{ scale: 1.05 }}
+                                className="p-8 h-full bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all cursor-pointer group"
+                            >
+                                <item.icon className="w-12 h-12 text-secondary mb-6 group-hover:scale-110 transition-transform" />
+                                <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
+                                <p className="text-white/50 text-base leading-relaxed">{item.desc}</p>
+                            </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>
