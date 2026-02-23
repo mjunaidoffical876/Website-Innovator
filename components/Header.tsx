@@ -2,7 +2,9 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Globe, Menu, X } from 'lucide-react';
-import GooeyNav from './GooeyNav'
+import { useLanguage } from '../app/LanguageContext';
+import { translations } from '../app/translations';
+import GooeyNav from './GooeyNav';
 
 // update with your own items
 const items = [
@@ -16,7 +18,8 @@ const items = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('English');
+  // language state moved to context
+  const { language, setLanguage } = useLanguage();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 gradient-bg py-4 transition-all duration-300">
@@ -56,15 +59,15 @@ export default function Header() {
               className="text-white hover:text-secondary transition-colors p-2 flex items-center"
             >
               <Globe className="w-5 h-5 mr-1" />
-              <span className="hidden sm:inline">{language}</span>
+              <span className="hidden sm:inline">{translations[language].language}</span>
             </button>
             {isLangMenuOpen && (
               <div className="origin-top-right absolute left-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                 <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                  {['English', 'Spanish', 'German', 'Arabic', 'French'].map((lang) => (
+                  {['en', 'es', 'de', 'ar', 'fr'].map((lang) => (
                     <button
                       key={lang}
-                      onClick={() => { setLanguage(lang); setIsLangMenuOpen(false); }}
+                      onClick={() => { setLanguage(lang as any); setIsLangMenuOpen(false); }}
                       className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     >
                       {lang}
@@ -78,7 +81,7 @@ export default function Header() {
           <div className="hidden sm:block w-px h-6 bg-white/20"></div>
 
           <button className="hidden sm:block bg-secondary text-primary px-4 sm:px-6 py-2 rounded-full font-bold text-sm sm:text-base hover:scale-105 transition-transform">
-            <Link href="#contact">Contact Us</Link>
+            <Link href="#contact">{translations[language].contact}</Link>
           </button>
 
           {/* Mobile Menu Toggle Button */}
