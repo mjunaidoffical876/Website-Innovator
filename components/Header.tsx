@@ -53,7 +53,7 @@ export default function Header() {
         {/* Right side controls */}
         <div className="flex items-center gap-2 sm:gap-4 shrink-0 z-10">
           {/* Language selector */}
-          <div className="relative inline-block text-left">
+          <div className="relative inline-block text-left notranslate" translate="no">
             <button
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
               className="text-white hover:text-secondary transition-colors p-2 flex items-center"
