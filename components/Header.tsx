@@ -37,7 +37,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button href="#" className="text-white hover:text-secondary transition-colors p-2">
+          <button className="text-white hover:text-secondary transition-colors p-2">
             <Globe className="w-5 h-5" />
           </button>
           <div className="w-px h-6 bg-white/20"></div>
