@@ -33,11 +33,16 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const setGoogleTranslateCookie = (lang: Language) => {
         if (lang === 'en') {
             document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.hostname;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname};`;
+            document.cookie = `googtrans=/en/en; path=/;`;
+            document.cookie = `googtrans=/en/en; path=/; domain=${window.location.hostname};`;
+            document.cookie = `googtrans=/en/en; path=/; domain=.${window.location.hostname};`;
         } else {
             const val = `/en/${lang}`;
             document.cookie = `googtrans=${val}; path=/;`;
             document.cookie = `googtrans=${val}; path=/; domain=${window.location.hostname};`;
+            document.cookie = `googtrans=${val}; path=/; domain=.${window.location.hostname};`;
         }
     }
 
