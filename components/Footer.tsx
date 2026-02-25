@@ -14,8 +14,8 @@ export default function Footer() {
               />
             </div>
             <p className="text-zinc-500 leading-relaxed">
-              Transforming the digital future of businesses in Ecuador and the
-              world with passion and technology.
+              Transforming the digital future of businesses worldwide
+              with passion, innovation, and cutting-edge technology.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export default function Footer() {
             <ul className="space-y-4 text-zinc-500">
               <li>info@websiteinnovator.org</li>
               <li>+92 318 6397291</li>
-              <li>Quito, Ecuador</li>
+              <li>Multan, Pakistan</li>
             </ul>
           </div>
         </div>

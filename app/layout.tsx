@@ -43,8 +43,8 @@ const jsonLd = {
   "telephone": "+92 318 6397291",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Quito",
-    "addressCountry": "Ecuador"
+    "addressLocality": "Multan",
+    "addressCountry": "Pakistan"
   },
   "sameAs": [
     "https://www.linkedin.com/company/websiteinnovator",
