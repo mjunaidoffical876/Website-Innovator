@@ -74,11 +74,11 @@ export default function Portfolio() {
                                 priority={index < 4}
                                 className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                             />
-                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0" />
-                            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-end p-8">
+                            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-end p-8 pointer-events-none">
                                 <span className="text-primary font-medium mb-2">{item.cat}</span>
                                 <h3 className="text-2xl font-bold text-white">{item.title}</h3>
                             </div>
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-20" />
                         </motion.div>
                     ))}
                 </div>
