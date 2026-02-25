@@ -1,60 +1,97 @@
 export default function Footer() {
-    return (
-        <footer className="bg-dark text-white pt-24 pb-12 border-t border-white/5">
-            <div className="container mx-auto px-6">
-                <div className="grid md:grid-cols-4 gap-12 mb-20">
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-2">
-                            <img
-                                src="/logo.png" // We'll move the generated image here
-                                alt="Website Innovator Logo"
-                                width={100}
-                                height={100}
-                                className="object-cover"
-                            />
-                        </div>
-                        <p className="text-zinc-500 leading-relaxed">
-                            Transforming the digital future of businesses in Ecuador and the world with passion and technology.
-                        </p>
-                    </div>
-
-                    <div className="space-y-6">
-                        <h4 className="font-bold text-lg">Our Company</h4>
-                        <ul className="space-y-4 text-zinc-500">
-                            <li><a href="#" className="hover:text-secondary transition-colors">About Us</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Portfolio</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Blog</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div className="space-y-6">
-                        <h4 className="font-bold text-lg">Services</h4>
-                        <ul className="space-y-4 text-zinc-500">
-                            <li><a href="#" className="hover:text-secondary transition-colors">Web Design</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">Digital Marketing</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">SEO & SEM</a></li>
-                            <li><a href="#" className="hover:text-secondary transition-colors">E-Commerce</a></li>
-                        </ul>
-                    </div>
-
-                    <div className="space-y-6">
-                        <h4 className="font-bold text-lg">Contact</h4>
-                        <ul className="space-y-4 text-zinc-500">
-                            <li>[EMAIL_ADDRESS]</li>
-                            <li>+593 999 999 999</li>
-                            <li>Quito, Ecuador</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-600 text-sm">
-                    <p>© 2026 Publitek Agency. Todos los derechos reservados.</p>
-                    <div className="flex gap-8">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                    </div>
-                </div>
+  return (
+    <footer className="bg-dark text-white pt-24 pb-12 border-t border-white/5">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-12 mb-20">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <img
+                src="/logo.png" // We'll move the generated image here
+                alt="Website Innovator Logo"
+                width={100}
+                height={100}
+                className="object-cover"
+              />
             </div>
-        </footer>
-    );
+            <p className="text-zinc-500 leading-relaxed">
+              Transforming the digital future of businesses in Ecuador and the
+              world with passion and technology.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <h4 className="font-bold text-lg">Our Company</h4>
+            <ul className="space-y-4 text-zinc-500">
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  Careers
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="space-y-6">
+            <h4 className="font-bold text-lg">Services</h4>
+            <ul className="space-y-4 text-zinc-500">
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  Web Design
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  Digital Marketing
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  SEO & SEM
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-secondary transition-colors">
+                  E-Commerce
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-6">
+            <h4 className="font-bold text-lg">Contact</h4>
+            <ul className="space-y-4 text-zinc-500">
+              <li>[EMAIL_ADDRESS]</li>
+              <li>+593 999 999 999</li>
+              <li>Quito, Ecuador</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-600 text-sm">
+          <p>© 2026 Website Innovator. All rights reserved.</p>
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-white transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition-colors">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }

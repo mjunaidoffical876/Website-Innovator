@@ -1,12 +1,44 @@
 "use client";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 const projects = [
-    { title: "E-Commerce", cat: "Web Store", id: 1 },
-    { title: "Delivery App", cat: "Mobile", id: 2 },
-    { title: "Corporate Web", cat: "Design", id: 3 },
-    { title: "Marketing Campaign", cat: "Digital", id: 4 }
+    {
+        id: 1,
+        title: "London Beauties",
+        cat: "Beauty Salon",
+        image: "/portfolio/london-beauties.png",
+        link: "https://london-beauties.vercel.app/",
+    },
+    {
+        id: 2,
+        title: "Silo Restaurant",
+        cat: "Restaurant",
+        image: "/portfolio/silo-restaurant.png",
+        link: "https://silo-restaurant.vercel.app/",
+    },
+    {
+        id: 3,
+        title: "RealState Builders",
+        cat: "Construction",
+        image: "/portfolio/realstate-builders.png",
+        link: "https://realstate-builders.vercel.app/",
+    },
+    {
+        id: 4,
+        title: "Misspa Social",
+        cat: "Social Platform",
+        image: "/portfolio/misspasocial.png",
+        link: "https://misspasocial.vercel.app/",
+    },
+    {
+        id: 5,
+        title: "Rheinhotel Schulz",
+        cat: "Hotel",
+        image: "/portfolio/rheinhotel-schulz.png",
+        link: "https://rheinhotel-schulz-flax.vercel.app/",
+    },
 ];
 
 export default function Portfolio() {
@@ -33,13 +65,20 @@ export default function Portfolio() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1, duration: 0.6 }}
-                            className="group relative overflow-hidden rounded-3xl bg-zinc-200 aspect-video flex items-center justify-center cursor-pointer shadow-lg hover:shadow-2xl transition-all"
+                            className="group relative overflow-hidden rounded-3xl aspect-16/10 cursor-pointer shadow-lg hover:shadow-2xl transition-all"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-end p-8">
-                                <span className="text-secondary font-medium mb-2">{item.cat}</span>
-                                <h3 className="text-3xl font-bold text-white">{item.title}</h3>
+                            <Image
+                                src={item.image}
+                                alt={item.title}
+                                fill
+                                priority={index < 4}
+                                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 flex flex-col justify-end p-8">
+                                <span className="text-primary font-medium mb-2">{item.cat}</span>
+                                <h3 className="text-2xl font-bold text-white">{item.title}</h3>
                             </div>
-                            <p className="text-zinc-400 font-bold text-4xl group-hover:scale-110 transition-transform"> PIXEL PERFECT WORK</p>
                         </motion.div>
                     ))}
                 </div>
