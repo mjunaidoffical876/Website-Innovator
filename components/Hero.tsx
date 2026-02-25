@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -27,12 +28,12 @@ export default function Hero() {
                         Boost your business in the digital world with customized strategies and designs that captivate your audience. Experts in real results
                     </p>
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="bg-secondary text-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(250,204,21,0.4)] transition-all">
+                        <Link href="/services" className="bg-secondary text-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(250,204,21,0.4)] transition-all">
                             Learn More
-                        </button>
-                        <button className="border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center gap-2">
+                        </Link>
+                        <Link href="/portfolio" className="border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center gap-2">
                             View Projects
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
 

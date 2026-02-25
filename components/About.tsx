@@ -1,5 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function About() {
     return (
@@ -40,9 +41,9 @@ export default function About() {
                         Our team combines creativity with data analysis to ensure that every penny of your investment translates into real growth for your brand.
                     </p>
                     <div className="pt-4">
-                        <button className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all group">
+                        <Link href="/about" className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all group">
                             Read more about us <span className="text-xl">→</span>
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>

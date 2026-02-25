@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 const projects = [
     {
@@ -53,9 +54,9 @@ export default function Portfolio() {
                             Marketing <span className="text-primary">Agency</span>
                         </h2>
                     </div>
-                    <button className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-accent transition-all">
+                    <Link href="/portfolio" className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-accent transition-all block w-max">
                         View all work
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">

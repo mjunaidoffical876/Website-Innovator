@@ -23,12 +23,12 @@ export default function Footer() {
             <h4 className="font-bold text-lg">Our Company</h4>
             <ul className="space-y-4 text-zinc-500">
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/about" className="hover:text-secondary transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/portfolio" className="hover:text-secondary transition-colors">
                   Portfolio
                 </a>
               </li>
@@ -38,7 +38,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/contact" className="hover:text-secondary transition-colors">
                   Careers
                 </a>
               </li>
@@ -48,22 +48,22 @@ export default function Footer() {
             <h4 className="font-bold text-lg">Services</h4>
             <ul className="space-y-4 text-zinc-500">
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/services" className="hover:text-secondary transition-colors">
                   Web Design
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/services" className="hover:text-secondary transition-colors">
                   Digital Marketing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/services" className="hover:text-secondary transition-colors">
                   SEO & SEM
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/services" className="hover:text-secondary transition-colors">
                   E-Commerce
                 </a>
               </li>

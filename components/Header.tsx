@@ -7,10 +7,10 @@ import GooeyNav from './GooeyNav';
 // update with your own items
 const items = [
   { label: "Home", href: "/" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -47,9 +47,9 @@ export default function Header() {
 
         {/* Right side controls */}
         <div className="flex items-center gap-2 sm:gap-4 shrink-0 z-10">
-          <button className="hidden sm:block bg-secondary text-primary px-4 sm:px-6 py-2 rounded-full font-bold text-sm sm:text-base hover:scale-105 transition-transform">
-            <Link href="#contact">Contact Us</Link>
-          </button>
+          <Link href="/contact" className="hidden sm:flex bg-secondary text-primary px-4 sm:px-6 py-2 rounded-full font-bold text-sm sm:text-base hover:scale-105 transition-transform text-center items-center justify-center">
+            Contact Us
+          </Link>
 
           {/* Mobile Menu Toggle Button */}
           <button
