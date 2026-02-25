@@ -1,7 +1,14 @@
 "use client";
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-const clients = ["London Beauties", "Silo Restaurant", "RealState Builders", "Misspa Social", "Rheinhotel Schulz"];
+const clients = [
+    { name: "London Beauties", logo: "/logos/london-beauties.png" },
+    { name: "Silo Restaurant", logo: "/logos/silo-restaurant.png" },
+    { name: "RealState Builders", logo: "/logos/realstate-builders.png" },
+    { name: "Misspa Social", logo: "/logos/misspasocial.png" },
+    { name: "Rheinhotel Schulz", logo: "/logos/rheinhotel-schulz.png" }
+];
 
 export default function Clients() {
     return (
@@ -15,9 +22,14 @@ export default function Clients() {
                         <motion.div
                             key={i}
                             whileHover={{ scale: 1.1 }}
-                            className="font-bold text-2xl md:text-3xl text-zinc-300 pointer-events-none"
+                            className="relative h-12 w-32 md:h-16 md:w-48 pointer-events-none"
                         >
-                            {c}
+                            <Image 
+                                src={c.logo} 
+                                alt={c.name} 
+                                fill
+                                className="object-contain"
+                            />
                         </motion.div>
                     ))}
                 </div>
