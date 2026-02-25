@@ -8,13 +8,14 @@ export const metadata: Metadata = {
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
+import FAQ from '@/components/FAQ';
 
 export default function Home() {
     return (
         <main className="min-h-screen">
             <Header />
             <Contact />
-
+            <FAQ />
             <Footer />
         </main>
     );

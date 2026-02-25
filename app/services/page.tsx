@@ -7,14 +7,17 @@ export const metadata: Metadata = {
     keywords: ["web design services", "responsive web design", "SEO services", "PPC management", "social media marketing", "ecommerce website design", "digital advertising"],
 };
 import Services from '@/components/Services';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
 export default function Home() {
     return (
         <main className="min-h-screen">
             <Header />
-            <Services />
-
+            <div className="pt-24 hover:bg-black group"> 
+                <Services />
+            </div>
+            <FAQ />
             <Footer />
         </main>
     );

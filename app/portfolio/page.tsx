@@ -7,14 +7,17 @@ export const metadata: Metadata = {
     keywords: ["web design portfolio", "digital agency work", "website development case studies", "marketing strategy results"],
 };
 import Portfolio from '@/components/Portfolio';
+import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
 export default function Home() {
     return (
         <main className="min-h-screen">
             <Header />
-            <Portfolio />
-
+            <div className="pt-24 hover:bg-black group"> 
+                <Portfolio />
+            </div>
+            <FAQ />
             <Footer />
         </main>
     );
