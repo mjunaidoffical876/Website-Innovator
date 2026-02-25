@@ -4,7 +4,6 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Stats from '@/components/Stats';
-import Clients from '@/components/Clients';
 import Contact from '@/components/Contact';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
@@ -20,7 +19,6 @@ export default function Home() {
       <Portfolio />
       <Stats />
       <Testimonials />
-      <Clients />
       <Contact />
 
       {/* Quote Section */}

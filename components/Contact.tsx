@@ -50,7 +50,7 @@ export default function Contact() {
                         <button onClick={() => window.location.href = "https://wa.me/923186397291"} className="w-full bg-[#25D366] text-white py-4 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 transition-transform">
                             <MessageCircle className="w-6 h-6" /> WhatsApp
                         </button>
-                        <button onClick={() => window.location.href = "mailto:[EMAIL_ADDRESS]"} className="w-full border border-white/20 text-white py-4 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all">
+                        <button onClick={() => window.location.href = "mailto:info@websiteinnovator.org"} className="w-full border border-white/20 text-white py-4 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all">
                             <Mail className="w-6 h-6" /> Send Email
                         </button>
                     </div>

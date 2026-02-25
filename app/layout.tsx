@@ -40,7 +40,7 @@ const jsonLd = {
   "name": "Website Innovator",
   "image": "https://websiteinnovator.com/logo.png",
   "url": "https://websiteinnovator.com",
-  "telephone": "+923186397291",
+  "telephone": "+92 318 6397291",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Quito",

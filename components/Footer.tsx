@@ -73,8 +73,8 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="font-bold text-lg">Contact</h4>
             <ul className="space-y-4 text-zinc-500">
-              <li>[EMAIL_ADDRESS]</li>
-              <li>+593 999 999 999</li>
+              <li>info@websiteinnovator.org</li>
+              <li>+92 318 6397291</li>
               <li>Quito, Ecuador</li>
             </ul>
           </div>

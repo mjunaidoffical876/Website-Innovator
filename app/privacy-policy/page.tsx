@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
           <div>
             <h2 className="text-3xl font-bold text-dark mb-4">4. Your Rights</h2>
             <p className="leading-relaxed">
-              You have the right to access, update, or delete your personal information at any time. You can also opt out of receiving promotional communications from us. Please contact us at Info@csss.org for any requests regarding your data.
+              You have the right to access, update, or delete your personal information at any time. You can also opt out of receiving promotional communications from us. Please contact us at info@websiteinnovator.org for any requests regarding your data.
             </p>
           </div>
         </div>
