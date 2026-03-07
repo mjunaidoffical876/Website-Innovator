@@ -27,12 +27,13 @@ export default function Hero() {
                     <p className="text-white/80 text-lg max-w-lg leading-relaxed">
                         Boost your business in the digital world with customized strategies and designs that captivate your audience. Experts in real results
                     </p>
-                    <div className="flex flex-wrap gap-4 pt-4">
-                        <Link href="/services" className="bg-secondary text-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(250,204,21,0.4)] transition-all">
-                            Learn More
+                    <div className="flex flex-wrap gap-6 pt-4">
+                        <Link href="/services" className="bg-secondary text-primary px-10 py-5 rounded-full font-bold text-xl hover:scale-105 hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all">
+                            Start Growing 
                         </Link>
-                        <Link href="/portfolio" className="border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center gap-2">
-                            View Projects
+                        <Link href="/portfolio" className="border-2 border-white/20 text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-white/10 hover:border-white/40 transition-all flex items-center gap-3 group">
+                            Our Portfolio
+                            <span className="group-hover:translate-x-2 transition-transform">→</span>
                         </Link>
                     </div>
                 </motion.div>

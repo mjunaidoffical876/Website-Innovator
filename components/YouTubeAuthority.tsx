@@ -30,13 +30,13 @@ export default function YouTubeAuthority() {
                 <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
                     <div className="max-w-xl">
                         <span className="text-secondary font-bold uppercase tracking-widest text-sm flex items-center gap-2">
-                           <Youtube className="w-5 h-5" /> Phase 5: YouTube Authority
+                           <Youtube className="w-5 h-5 text-red-500" /> Expert Insights
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
-                            Learn from the <span className="text-secondary italic">Expert</span>
+                            Learn from the <span className="text-secondary italic">Industry Leader</span>
                         </h2>
                         <p className="text-white/60 mt-4 text-lg">
-                            Muhammad Junaid shares daily insights on web development, SEO, and the future of AI. Join our community of 5,000+ subscribers.
+                            Muhammad Junaid shares technical deep-dives on web development, modern SEO methodology, and scaling digital brands.
                         </p>
                     </div>
                     <div className="flex gap-6">
@@ -85,16 +85,7 @@ export default function YouTubeAuthority() {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
-                    <a 
-                        href="https://youtube.com/@WebsiteInnovator" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="bg-red-600 text-white font-bold py-4 px-10 rounded-full hover:bg-red-700 transition-all inline-flex items-center gap-3 text-lg"
-                    >
-                        <Youtube className="w-6 h-6" /> Subscribe for Weekly Content
-                    </a>
-                </div>
+                {/* Button removed as requested */}
             </div>
         </section>
     );

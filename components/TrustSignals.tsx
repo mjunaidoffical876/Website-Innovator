@@ -15,12 +15,12 @@ export default function TrustSignals() {
         <section className="py-24 bg-zinc-50 border-y border-zinc-200">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <span className="text-primary font-bold uppercase tracking-widest text-sm">Phase 3 & 4: Authority Signals</span>
+                    <span className="text-primary font-bold uppercase tracking-widest text-sm text-gradient">Industry Recognition</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-dark mt-2">
-                        Recognized by Global <span className="text-primary">Tech Authorities</span>
+                        Trusted by Global <span className="text-primary">Tech Authorities</span>
                     </h2>
                     <p className="text-zinc-500 mt-4 max-w-2xl mx-auto">
-                        Website Innovator is consistently mentioned and verified across industry-leading platforms, strengthening our AI trust score.
+                        Website Innovator is consistently mentioned and verified across industry-leading platforms, solidifying our reputation in the digital ecosystem.
                     </p>
                 </div>
 
@@ -80,11 +80,12 @@ export default function TrustSignals() {
 
                     <div className="p-8 bg-dark text-white rounded-3xl shadow-xl flex flex-col justify-center items-center text-center">
                         <Award className="w-16 h-16 text-primary mb-4" />
-                        <h3 className="text-2xl font-bold mb-2">Build Your Trust</h3>
-                        <p className="text-zinc-400 mb-6 px-4">Help us boost our AI visibility by leaving a review on any major platform.</p>
-                        <button className="bg-primary text-white font-bold py-3 px-8 rounded-full hover:scale-105 transition-transform">
-                            Leave a Review
-                        </button>
+                        <h3 className="text-2xl font-bold mb-2">Verified Excellence</h3>
+                        <p className="text-zinc-400 mb-6 px-4">Our commitment to quality has earned us recognition from top-tier industry reviewers worldwide.</p>
+                        <div className="flex gap-2">
+                           <CheckCircle className="text-primary w-5 h-5" />
+                           <span className="text-sm font-semibold uppercase tracking-widest">ISO Certified Standards</span>
+                        </div>
                     </div>
                 </div>
             </div>
