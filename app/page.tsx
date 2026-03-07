@@ -3,7 +3,6 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
-import TrustSignals from '@/components/TrustSignals';
 import Stats from '@/components/Stats';
 import YouTubeAuthority from '@/components/YouTubeAuthority';
 import Contact from '@/components/Contact';
@@ -19,7 +18,6 @@ export default function Home() {
       <About />
       <Services limit={3} />
       <Portfolio />
-      <TrustSignals />
       <Stats />
       <YouTubeAuthority />
       <Testimonials />

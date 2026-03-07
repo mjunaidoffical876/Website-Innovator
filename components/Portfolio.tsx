@@ -54,8 +54,8 @@ export default function Portfolio() {
                             Marketing <span className="text-primary">Agency</span>
                         </h2>
                     </div>
-                    <Link href="/portfolio" className="bg-primary text-white px-8 py-3 rounded-full font-bold hover:bg-accent transition-all block w-max">
-                        View all work
+                    <Link href="/portfolio" className="bg-primary text-dark px-10 py-5 rounded-full font-bold text-xl hover:scale-105 hover:bg-dark hover:text-white hover:shadow-[0_0_40px_rgba(30,27,75,0.2)] transition-all block w-max">
+                        View all projects
                     </Link>
                 </div>
 
