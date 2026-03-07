@@ -82,12 +82,18 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-zinc-600 text-sm">
           <p>© 2026 Website Innovator. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex gap-8 flex-wrap justify-center md:justify-end">
             <a href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
             <a href="/terms-of-service" className="hover:text-white transition-colors">
               Terms of Service
+            </a>
+            <a href="/refund-policy" className="hover:text-white transition-colors">
+              Refund Policy
+            </a>
+            <a href="/disclaimer" className="hover:text-white transition-colors">
+              Disclaimer
             </a>
           </div>
         </div>

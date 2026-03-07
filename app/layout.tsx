@@ -36,22 +36,56 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Website Innovator",
-  "image": "https://websiteinnovator.com/logo.png",
-  "url": "https://websiteinnovator.com",
-  "telephone": "+92 318 6397291",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Multan",
-    "addressCountry": "Pakistan"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/websiteinnovator",
-    "https://twitter.com/websiteinnovator"
-  ],
-  "priceRange": "$$",
-  "description": "Premium web design and digital marketing agency offering SEO, custom web development, and digital strategies for growth."
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://websiteinnovator.org/#organization",
+      "name": "Website Innovator",
+      "image": "https://websiteinnovator.org/logo.png",
+      "url": "https://websiteinnovator.org",
+      "telephone": "+92 318 6397291",
+      "email": "info@websiteinnovator.org",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Multan",
+        "addressCountry": "PK"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/websiteinnovator",
+        "https://www.facebook.com/websiteinnovator",
+        "https://www.instagram.com/websiteinnovator",
+        "https://github.com/websiteinnovator"
+      ],
+      "founder": {
+        "@id": "https://websiteinnovator.org/#person"
+      },
+      "description": "Website Innovator is a premium digital agency providing web development, SEO, and marketing services for startups and small businesses."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://websiteinnovator.org/#person",
+      "name": "Muhammad Junaid",
+      "jobTitle": "CEO & Founder",
+      "url": "https://websiteinnovator.org",
+      "sameAs": [
+        "https://www.linkedin.com/in/muhammadjunaid",
+        "https://github.com/mjunaid"
+      ],
+      "worksFor": {
+        "@id": "https://websiteinnovator.org/#organization"
+      },
+      "description": "Web Development expert with 5+ years of experience, specialized in WordPress, Shopify, and SEO. Founder of Website Innovator."
+    },
+    {
+        "@type": "WebSite",
+        "@id": "https://websiteinnovator.org/#website",
+        "url": "https://websiteinnovator.org",
+        "name": "Website Innovator",
+        "publisher": {
+            "@id": "https://websiteinnovator.org/#organization"
+        }
+    }
+  ]
 };
 
 export default function RootLayout({

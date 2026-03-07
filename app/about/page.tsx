@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   keywords: ["best digital agency", "about our marketing agency", "top web design company", "digital strategy experts"],
 };
 import About from '@/components/About';
+import TrustSignals from '@/components/TrustSignals';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <div className="pt-24 hover:bg-black group"> 
           <About />
       </div>
+      <TrustSignals />
 
       <FAQ />
       <Footer />

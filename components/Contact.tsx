@@ -53,6 +53,15 @@ export default function Contact() {
                         <button onClick={() => window.location.href = "mailto:info@websiteinnovator.org"} className="w-full border border-white/20 text-white py-4 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 hover:bg-white/10 transition-all">
                             <Mail className="w-6 h-6" /> Send Email
                         </button>
+                        <div className="pt-4 flex items-center gap-4 text-white/80">
+                            <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                                <span className="text-xl">📍</span>
+                            </div>
+                            <div>
+                                <p className="font-bold">Office Location</p>
+                                <p className="text-sm">Multan, Punjab, Pakistan</p>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
             </div>

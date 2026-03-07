@@ -1,5 +1,6 @@
 "use client"
 import { useRef, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const GooeyNav = ({
   items,
@@ -111,6 +112,10 @@ const GooeyNav = ({
       }
     }
   };
+  useEffect(() => {
+    setActiveIndex(initialActiveIndex);
+  }, [initialActiveIndex]);
+
   useEffect(() => {
     if (!navRef.current || !containerRef.current) return;
     const activeLi = navRef.current.querySelectorAll('li')[activeIndex];
@@ -274,7 +279,7 @@ const GooeyNav = ({
         <nav className="flex relative items-center bg-white/5 rounded-full px-5 py-2.5 backdrop-blur-md shadow-2xl border border-white/10" style={{ transform: 'translate3d(0,0,0.01px)' }}>
           <ul
             ref={navRef}
-            className="flex gap-8 list-none p-0 px-4 m-0 relative z-[3]"
+            className="flex gap-8 list-none p-0 px-4 m-0 relative z-3"
             style={{
               color: 'white',
               textShadow: '0 1px 1px hsl(205deg 30% 10% / 0.2)'
@@ -286,14 +291,14 @@ const GooeyNav = ({
                 className={`rounded-full relative cursor-pointer transition-[background-color_color_box-shadow] duration-300 ease shadow-[0_0_0.5px_1.5px_transparent] text-white ${activeIndex === index ? 'active' : ''
                   }`}
               >
-                <a
+                <Link
                   onClick={e => handleClick(e, index)}
                   href={item.href}
                   onKeyDown={e => handleKeyDown(e, index)}
                   className="outline-none tracking-tight font-medium py-[0.6em] px-[1em] inline-block"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

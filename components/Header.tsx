@@ -1,6 +1,7 @@
-"use client";
-import { useState } from 'react';
+"use client"
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import GooeyNav from './GooeyNav';
 
@@ -15,13 +16,24 @@ const items = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const index = items.findIndex(item => 
+      item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+    );
+    if (index !== -1) {
+      setActiveIndex(index);
+    }
+  }, [pathname]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 gradient-bg py-4 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
 
         {/* Logo */}
-        <div className="flex items-center gap-2 z-10 shrink-0">
+        <Link href="/" className="flex items-center gap-2 z-10 shrink-0 hover:opacity-80 transition-opacity">
           <img
             src="/logo.png"
             alt="Website Innovator Logo"
@@ -29,7 +41,7 @@ export default function Header() {
             height={100}
             className="object-cover"
           />
-        </div>
+        </Link>
 
         {/* Desktop Navigation (GooeyNav) */}
         <div className="hidden lg:flex relative h-16 items-center flex-1 justify-center z-0">
@@ -38,7 +50,7 @@ export default function Header() {
             particleCount={15}
             particleDistances={[90, 10]}
             particleR={100}
-            initialActiveIndex={0}
+            initialActiveIndex={activeIndex}
             animationTime={600}
             timeVariance={300}
             colors={[1, 2, 3, 1, 2, 3, 1, 4]}

@@ -29,20 +29,27 @@ export default function About() {
                     transition={{ duration: 0.8 }}
                     className="space-y-6"
                 >
-                    <span className="text-primary font-bold uppercase tracking-widest text-sm">We all are your's </span>
+                    <span className="text-primary font-bold uppercase tracking-widest text-sm">Meet the Visionary </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-dark">
-                        The #1 agency in the <br />
-                        <span className="text-primary">World</span>
+                        Led by <span className="text-primary">Muhammad Junaid</span>
                     </h2>
-                    <p className="text-zinc-600 text-lg leading-relaxed">
-                        With more than 10 years in the market, we have helped hundreds of companies scale their digital presence. We don't just create websites, we build powerful and effective sales tools.
-                    </p>
-                    <p className="text-zinc-600 text-lg leading-relaxed">
-                        Our team combines creativity with data analysis to ensure that every penny of your investment translates into real growth for your brand.
-                    </p>
+                    <div className="space-y-4">
+                        <p className="text-zinc-600 text-lg leading-relaxed font-semibold">
+                            CEO & Founder | 5+ Years of Digital Excellence
+                        </p>
+                        <p className="text-zinc-600 text-lg leading-relaxed">
+                            Under the leadership of Muhammad Junaid, winner of the <span className="text-primary font-bold">"Best Teacher Award – TechSpot"</span>, Website Innovator has become a cornerstone for SMEs and startups seeking real digital growth.
+                        </p>
+                        <p className="text-zinc-600 text-lg leading-relaxed">
+                            With half a decade of deep expertise in WordPress, Shopify, and Advanced SEO, we don't just create websites — we engineer powerful sales engines that turn clicks into loyal customers.
+                        </p>
+                        <p className="text-zinc-600 text-lg leading-relaxed">
+                            Our mission is simple: to democratize high-end digital growth solutions for emerging businesses, combining creative soul with data-driven strategy.
+                        </p>
+                    </div>
                     <div className="pt-4">
-                        <Link href="/about" className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all group">
-                            Read more about us <span className="text-xl">→</span>
+                        <Link href="/contact" className="text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all group">
+                            Start your growth journey today <span className="text-xl">→</span>
                         </Link>
                     </div>
                 </motion.div>
