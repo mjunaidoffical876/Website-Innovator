@@ -44,15 +44,15 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-4">
-                        <button onClick={() => window.location.href = "tel:+923186397291"} className="w-full bg-secondary text-primary py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all">
+                        <a href="tel:+923186397291" className="w-full bg-secondary text-primary py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 hover:shadow-[0_0_40px_rgba(250,204,21,0.3)] transition-all">
                             <Phone className="w-6 h-6" />  Call us now
-                        </button>
-                        <button onClick={() => window.location.href = "https://wa.me/923186397291"} className="w-full bg-[#25D366] text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,211,102,0.3)] transition-all">
+                        </a>
+                        <a href="https://wa.me/923186397291" target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,211,102,0.3)] transition-all">
                             <MessageCircle className="w-6 h-6" /> WhatsApp
-                        </button>
-                        <button onClick={() => window.location.href = "mailto:info@websiteinnovator.org"} className="w-full border-2 border-white/20 text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:bg-white/10 hover:border-white/40 transition-all">
+                        </a>
+                        <a href="mailto:info@websiteinnovator.org" className="w-full border-2 border-white/20 text-white py-5 rounded-full font-bold text-xl flex items-center justify-center gap-3 hover:bg-white/10 hover:border-white/40 transition-all">
                             <Mail className="w-6 h-6" /> Send Email
-                        </button>
+                        </a>
                         <div className="pt-4 flex items-center gap-4 text-white/80">
                             <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                                 <span className="text-xl">📍</span>
