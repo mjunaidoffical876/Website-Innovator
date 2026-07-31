@@ -15,7 +15,7 @@ export default function About() {
                     {/* Placeholder for About image or decorative element */}
                     <div className="absolute ">
                         <img
-                            src="/Container.png" // We'll move the generated image here
+                            src="/public/Muhammad Junaid.jpeg" // We'll move the generated image here
                             alt="Professional Team"
                             className="object-cover h-full w-full mt-10"
                         />
